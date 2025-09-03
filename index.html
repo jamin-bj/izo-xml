@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Website</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for a cleaner look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <!-- Main content card -->
+    <div class="bg-white shadow-xl rounded-2xl p-8 max-w-lg w-full text-center space-y-6">
+        <h1 class="text-4xl font-bold text-gray-800">Hello there!</h1>
+        <p class="text-lg text-gray-600">
+            Welcome to your new website. This is a single-file webpage designed to get you started quickly.
+        </p>
+        
+        <!-- A simple button to demonstrate JavaScript -->
+        <button id="ctaButton" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+            Click Me!
+        </button>
+
+        <!-- Message box for button click -->
+        <div id="messageBox" class="mt-4 text-sm text-gray-500 hidden">
+            <!-- The message will appear here -->
+        </div>
+    </div>
+
+    <script>
+        // Get the button and message box elements
+        const ctaButton = document.getElementById('ctaButton');
+        const messageBox = document.getElementById('messageBox');
+
+        // Add a click event listener to the button
+        ctaButton.addEventListener('click', () => {
+            // Display a message in the message box
+            messageBox.textContent = 'This button was clicked! You can add more interactive features here.';
+            messageBox.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
